@@ -1,0 +1,32 @@
+/**
+ * Core image block
+ */
+
+.wp-block-image {
+
+	& .wp-element-caption {
+		font-size: var(--wp--custom--font-sizes--12-14);
+
+		& a {
+			font-weight: var(--wp--custom--font-weight--semibold);
+		}
+
+		@media (--bp-medium) {
+			text-align: center;
+		}
+	}
+}
+
+.wp-caption {
+	background-color: var(--wp--custom--color--gray-light);
+	display: flex;
+	flex-direction: column;
+	margin-bottom: var(--wp--custom--spacing--012);
+	padding: var(--wp--custom--spacing--004);
+
+	& .wp-caption-text {
+		font-size: 10px;
+		margin-top: var(--wp--custom--spacing--004);
+		text-align: center;
+	}
+}

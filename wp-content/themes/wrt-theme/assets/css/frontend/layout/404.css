@@ -1,0 +1,30 @@
+/**
+ * 404 layout
+ */
+
+.error404 main.site-content {
+
+	& .page-404 {
+		max-width: 100%;
+		padding-bottom: calc(var(--wp--custom--spacing--064) * 2);
+	}
+
+	& header.page-header {
+		text-align: center;
+	}
+
+	& header.page-header,
+	& div.error-404 {
+		margin: 0 auto;
+		width: var(--wp--custom--width--default);
+	}
+
+	& div.error-404 .site-header {
+		margin-top: var(--wp--custom--spacing--040);
+		min-height: auto;
+
+		& .header-search--container {
+			top: 0;
+		}
+	}
+}

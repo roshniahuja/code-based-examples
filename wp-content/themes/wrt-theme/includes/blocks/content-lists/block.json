@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Content Lists",
+  "description": "A list of curated posts",
+  "textdomain": "wrt-theme",
+  "name": "wrt/content-lists",
+  "icon": "list-view",
+  "category": "formatting",
+  "attributes":{
+    "is_editor": {
+      "default": false,
+      "type": "boolean"
+    },
+    "cta_show": {
+      "type": "boolean",
+      "default": false
+    },
+    "cta_text": {
+      "type": "string",
+      "default": "View More"
+    },
+    "cta_url": {
+      "type": "string",
+      "default": ""
+    },
+    "title": {
+      "type" : "string",
+      "default": ""
+    },
+    "posts": {
+      "type": "array",
+      "default": []
+    },
+    "curate_these_posts": {
+      "default": true,
+      "type": "boolean"
+    },
+    "categories": {
+      "type": "array",
+      "default": []
+    },
+    "topicsCategories": { 
+      "type": "array",
+      "default": [] 
+    },
+    "category": { 
+      "type": "string", 
+      "default": "" 
+    },
+    "topic": { 
+      "type": "string", 
+      "default": "" 
+    }
+  },
+  "example": {
+    "attributes":{
+      "title": "Deals & Shopping"
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./index.js"
+}

@@ -1,0 +1,65 @@
+html {
+	/* stylelint-disable-next-line length-zero-no-unit */
+	--scrollbar-width: 0px;
+}
+
+:root {
+	--viewport-height: calc(var(--1dvh, 1vh) * 100);
+	--full-viewport-width: 100vw;
+	--site-outer-padding: var(--wp--custom--spacing--020, 20px);
+	--site-content-width: calc(var(--full-viewport-width) - (2 * var(--site-outer-padding)));
+
+	--small-width: min(728px, var(--site-content-width));
+	--default-width: min(927px, var(--site-content-width));
+	--wide-width: min(1193px, var(--site-content-width));
+	--container-width: min(1304px, var(--site-content-width));
+
+	@media (--bp-large) {
+		--site-outer-padding: var(--wp--custom--spacing--068, 68px);
+	}
+}
+
+/*
+ * Ensure that full width blocks at the root
+ * level don't have any spacing in between
+ */
+.block-editor-block-list__layout.is-root-container > .alignfull + .alignfull {
+	margin-block-start: 0;
+}
+
+/**
+ * Remove reCAPTCHA badge.
+ */
+.grecaptcha-badge {
+	display: none;
+}
+
+body .is-layout-flow > * + * {
+	margin-block-start: var(--wp--custom--spacing--032);
+
+	@media (--bp-medium) {
+		margin-block-start: var(--wp--custom--spacing--064);
+	}
+
+	/* Exception: Correct negative margin from inline card block */
+	&.wp-block-wrt-inline-card {
+		margin-block-start: calc(5 * var(--wp--custom--spacing--032));
+	}
+
+	&.ctx-module-container {
+		margin: 0 !important;
+	}
+}
+
+.is-layout-flow,
+.is-layout-constrained {
+
+	& > p {
+		margin-bottom: var(--wp--custom--spacing--024);
+		margin-top: var(--wp--custom--spacing--024);
+
+		& + p {
+			margin-top: 0;
+		}
+	}
+}

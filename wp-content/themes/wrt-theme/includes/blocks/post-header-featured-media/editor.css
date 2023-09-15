@@ -1,0 +1,10 @@
+.editor-styles-wrapper {
+
+	& .single-post--hero .wp-block.single-post--hero-image-container {
+		left: auto;
+		max-width: calc(100% - 517px); /* 485px is the width of the feature card  (we're adding 2rem for padding) */
+		right: 0;
+		transform: translate(0);
+		z-index: 10;
+	}
+}

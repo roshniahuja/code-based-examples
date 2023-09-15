@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Topic",
+  "description": "Topic for the topics block",
+  "textdomain": "wrt-theme",
+  "name": "wrt/topic",
+  "icon": "index-card",
+  "category": "formatting",
+  "attributes":{
+    "description": {
+      "type" : "string",
+      "default": ""
+    },
+    "icon": {
+      "type": "object",
+      "default": {
+        "id": 0,
+        "url": "",
+        "alt": ""
+      }
+    },
+    "title": {
+      "type" : "string",
+      "default": ""
+    },
+    "topic": {
+      "type": "object"
+    }
+  },
+  "example": {
+    "attributes":{
+      "description": "This is where the teaching magic happens. These classroom ideas, teaching strategies, and actionable tips from brilliant teachers (like you) will inspire you, answer your burning questions, and help you be the best teacher you can be!",
+      "eyebrow": "Elementary",
+      "title": "Teaching Topics"
+    }
+  },
+  "supports": {
+    "html": false,
+    "reusable": false
+  },
+  "parent": [ "wrt/topics" ],
+  "editorScript": "file:./index.js"
+}

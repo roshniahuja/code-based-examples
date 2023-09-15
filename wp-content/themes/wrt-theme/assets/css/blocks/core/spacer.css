@@ -1,0 +1,15 @@
+/**
+ * Core spacer block
+ */
+
+.wp-block-group .wp-block-spacer {
+	max-height: var(--wp--custom--spacing--016);
+
+	@media (--bp-large) {
+		max-height: var(--wp--custom--spacing--032);
+	}
+
+	@media (--bp-xlarge) {
+		max-height: var(--wp--custom--spacing--064);
+	}
+}

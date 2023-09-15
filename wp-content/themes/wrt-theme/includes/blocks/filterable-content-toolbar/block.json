@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Filterable Content Toolbar",
+  "description": "A toolbar for filtering content by teaching topic or grade level.",
+  "textdomain": "wrt-theme",
+  "name": "wrt/filterable-content-toolbar",
+  "icon": "filter",
+  "category": "formatting",
+  "attributes":{
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "category": {
+      "type": "object"
+    }
+  },
+  "supports": {
+    "align": true,
+    "html": false
+  },
+  "editorScript": "file:./index.js"
+}

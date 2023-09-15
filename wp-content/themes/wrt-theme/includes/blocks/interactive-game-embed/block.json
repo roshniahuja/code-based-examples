@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Interactive Game Embed",
+  "description": "Embeds and HTML Interactive Game",
+  "textdomain": "wrt-theme",
+  "name": "wrt/interactive-game-embed",
+  "icon": "game",
+  "category": "formatting",
+  "attributes":{
+  },
+  "usesContext": ["postId", "postType"],
+  "supports": {
+    "html": false,
+    "reusable": false
+  },
+  "editorScript": "file:./index.js"
+}

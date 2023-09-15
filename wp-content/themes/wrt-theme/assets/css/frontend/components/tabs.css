@@ -1,0 +1,54 @@
+.wrt-tabs {
+	align-items: center;
+	border-bottom: 1px solid var(--wp--custom--color--gray);
+	display: flex;
+	gap: var(--wp--custom--spacing--008);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	& .wrt-tab {
+		background-color: var(--wp--custom--color--white);
+		border: 1px solid var(--wp--custom--color--gray);
+		border-bottom: 0;
+		cursor: pointer;
+		padding: var(--wp--custom--spacing--008) var(--wp--custom--spacing--016);
+		position: relative;
+
+		&::after {
+			background-color: transparent;
+			bottom: -1px;
+			content: "";
+			display: block;
+			height: 1px;
+			left: 0;
+			position: absolute;
+			width: 100%;
+		}
+
+		&[aria-selected="true"]::after {
+			background-color: var(--wp--custom--color--white);
+		}
+	}
+}
+
+.wrt-tabs-section {
+	background-color: var(--wp--custom--color--white);
+	border: 1px solid var(--wp--custom--color--gray);
+	border-top: 0;
+	display: none;
+	padding: var(--wp--custom--spacing--016);
+
+	&[aria-expanded="true"] {
+		display: block;
+	}
+
+	& .contest-rules {
+
+		& .tabtop {
+			margin: 0;
+			margin-top: var(--wp--custom--spacing--008);
+			text-align: right;
+		}
+	}
+}

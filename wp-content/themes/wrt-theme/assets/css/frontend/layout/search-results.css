@@ -1,0 +1,38 @@
+.search-results {
+
+	& .search-results-section {
+		padding-top: 2rem;
+	}
+}
+
+.search-result__headline {
+	font-size: var(--wp--custom--font-sizes--31-39);
+}
+
+.search-no-results {
+
+	& .search-results-section {
+		max-width: 100%;
+		padding-bottom: calc(var(--wp--custom--spacing--064) * 2);
+	}
+
+	& header.page-header {
+		text-align: center;
+	}
+
+	& header.page-header,
+	& div.no-results-found {
+		margin: 0 auto;
+		text-align: center;
+		width: var(--wp--custom--width--default);
+	}
+
+	& div.no-results-found .site-header {
+		margin-top: var(--wp--custom--spacing--040);
+		min-height: auto;
+
+		& .header-search--container {
+			top: 0;
+		}
+	}
+}

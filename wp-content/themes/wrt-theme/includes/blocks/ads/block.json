@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Ads",
+  "description": "Ads placement block",
+  "textdomain": "wrt-theme",
+  "name": "wrt/ads",
+  "icon": "html",
+  "category": "formatting",
+  "attributes":{
+    "ad": {
+      "type" : "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./index.js"
+}

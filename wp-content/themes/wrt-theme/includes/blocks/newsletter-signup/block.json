@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Newsletter Sign Up",
+  "description": "A block to allow the user to sign up for a specific newsletter with additional options.\n",
+  "textdomain": "wrt-theme",
+  "name": "wrt/newsletter-signup",
+  "icon": "feedback",
+  "category": "widgets",
+  "attributes":{
+    "button": {
+      "type": "string",
+      "default": "Subscribe"
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "label": {
+      "type": "string",
+      "default": ""
+    },
+    "newsletter": {
+      "type": "array",
+      "default": []
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "variables": {
+      "type": "array",
+      "default": []
+    }
+  },
+  "example": {
+    "attributes":{
+      "button": "Subscribe",
+      "description": "All the best teaching and learning ideas, straight to your inbox.",
+      "label": "Select one or more of the newsletters that you’d like to receive. You can update your preferences or unsubscribe at any time.",
+      "subNewsletters": [
+        {
+          "description": "Don’t miss our weekly trending ideas & giveaways!",
+          "id": "1",
+          "label": "Best of WeAreTeachers",
+          "name": "Best of WeAreTeachers"
+        },
+        {
+          "description": "Book recommendations, book chat, reading lists, and more",
+          "id": "2",
+          "label": "Best of WeAreTeachers",
+          "name": "We Love Books"
+        }
+      ],
+      "title": "Stay in touch"
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./index.js"
+}

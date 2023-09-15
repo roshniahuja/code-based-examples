@@ -1,0 +1,24 @@
+.wp-block-wrt-affiliate-product {
+	margin-bottom: var(--wp--custom--spacing--040);
+
+	& .block-editor-plain-text {
+		background-color: transparent;
+	}
+
+	& .post-card {
+		background-color: var(--wp--custom--color--teal-lightest);
+		height: auto;
+		margin: 0 auto;
+		max-width: 480px;
+		overflow: hidden;
+
+		& .post-card__thumbnail {
+			margin: calc(-1 * var(--wp--custom--spacing--016));
+			margin-bottom: 0;
+
+			& img {
+				aspect-ratio: 1/1;
+			}
+		}
+	}
+}

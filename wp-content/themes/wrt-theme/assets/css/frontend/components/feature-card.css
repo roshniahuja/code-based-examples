@@ -1,0 +1,56 @@
+/**
+ * Feature card styles
+ *
+ * @package WRTTheme
+ */
+
+.feature-card {
+	background-color: var(--wp--custom--color--white);
+	padding: var(--wp--custom--spacing--020);
+
+	@media (--bp-medium) {
+		padding: var(--wp--custom--spacing--024);
+	}
+
+	& .feature-card--header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: var(--wp--custom--spacing--032);
+	}
+
+	& .feature-card--grade,
+	& .feature-card--sponsor {
+		color: var(--wp--custom--color--black-light);
+		font-size: var(--wp--custom--font-sizes--12-14);
+		text-transform: uppercase;
+	}
+
+	& .feature-card--grade {
+		align-items: center;
+		display: flex;
+		font-weight: var(--wp--custom--font-weight--bold);
+		white-space: nowrap;
+
+		& a {
+			margin-left: var(--wp--custom--spacing--004);
+		}
+	}
+
+	& .feature-card--sponsor {
+		font-weight: var(--wp--custom--font-weight--semibold);
+		margin-top: var(--wp--custom--spacing--032);
+	}
+
+	& > p {
+		color: var(--wp--custom--color--black-light);
+		font-size: var(--wp--custom--font-sizes--12-16);
+
+		@media (--bp-medium) {
+			font-size: var(--wp--custom--font-sizes--14-20);
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}

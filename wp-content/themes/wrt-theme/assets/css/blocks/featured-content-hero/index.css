@@ -1,0 +1,14 @@
+.home-hero-content-item {
+
+	&:not(:last-child) {
+		margin-bottom: var(--wp--custom--spacing--040);
+	}
+}
+
+.home-hero-featured-item {
+	margin-right: 0;
+
+	@media (--bp-medium) {
+		margin-right: var(--wp--custom--spacing--024);
+	}
+}

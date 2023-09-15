@@ -1,0 +1,7 @@
+.editor-styles-wrapper .wp-block-wrt-content-card .post-card {
+	height: auto;
+}
+
+.editor-styles-wrapper .wp-block-column .wp-block-wrt-content-card .post-card {
+	height: 100%;
+}

@@ -1,0 +1,15 @@
+@import url("classroom-ideas.css");
+
+.content-collection-items {
+	display: grid;
+	gap: var(--wp--custom--spacing--024);
+	grid-template-columns: 100%;
+
+	@media (--bp-medium) {
+		grid-template-columns: repeat(3, minmax(100px, 1fr));
+	}
+
+	& .post-card {
+		border-bottom-color: var(--wp--custom--color--teal);
+	}
+}

@@ -1,0 +1,12 @@
+/**
+ * Core block
+ */
+
+.wp-block-cover {
+
+	&.alignfull {
+		padding-left: var(--site-outer-padding);
+		padding-right: var(--site-outer-padding);
+		position: relative;
+	}
+}

@@ -1,0 +1,61 @@
+.classroom-idea {
+	background-color: var(--wp--custom--color--white);
+	border-left: 6px solid var(--wp--custom--color--teal);
+	padding: var(--wp--custom--spacing--016);
+
+	& .classroom-idea__header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	& .classroom-idea__meta {
+		align-items: center;
+		align-self: flex-start;
+		display: flex;
+		flex-basis: 150px;
+		font-size: var(--wp--custom--font-sizes--14);
+		font-weight: var(--wp--custom--font-weight--semibold);
+		gap: var(--wp--custom--spacing--008);
+		text-transform: uppercase;
+	}
+
+	& .classroom-idea__meta-icon {
+		height: 18px;
+		width: 18px;
+
+		& path {
+			fill: var(--wp--custom--color--teal);
+		}
+	}
+
+	& .classroom-idea__title {
+		font-size: var(--wp--custom--font-sizes--base);
+		font-weight: var(--wp--custom--font-weight--medium);
+		line-height: var(--wp--custom--line-height--1-5);
+		margin-bottom: 0;
+		margin-top: var(--wp--custom--spacing--012);
+
+		& a {
+			color: inherit;
+		}
+	}
+}
+
+.classroom-ideas-item {
+
+	&:not(:last-child) {
+		margin-bottom: var(--wp--custom--spacing--024);
+	}
+
+	&:nth-child(2) .classroom-idea {
+		border-left-color: var(--wp--custom--color--teal-75);
+	}
+
+	&:nth-child(3) .classroom-idea {
+		border-left-color: var(--wp--custom--color--teal-50);
+	}
+
+	&:nth-child(4) .classroom-idea {
+		border-left-color: var(--wp--custom--color--teal-25);
+	}
+}

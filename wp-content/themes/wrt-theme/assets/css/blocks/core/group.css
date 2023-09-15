@@ -1,0 +1,30 @@
+/**
+ * Group block
+ */
+.wp-block-group {
+
+	&.teal-gradient {
+		background: var(--wp--custom--color--teal-light-gradient);
+		padding: var(--wp--custom--spacing--032) 0;
+		position: relative;
+
+		@media (--bp-medium) {
+			padding: var(--wp--custom--spacing--064) 0;
+		}
+
+		&::after {
+			background-image: linear-gradient(180deg, var(--wp--custom--color--white-25) 0, var(--wp--custom--color--white-25) 10px, transparent 10px, transparent 20px, var(--wp--custom--color--white-50) 20px, var(--wp--custom--color--white-50) 30px, transparent 30px, transparent 40px, var(--wp--custom--color--white-75) 40px, var(--wp--custom--color--white-75) 50px, transparent 50px, transparent 60px, var(--wp--custom--color--white) 60px, var(--wp--custom--color--white) 70px);
+			bottom: 10px;
+			content: "";
+			height: 70px;
+			position: absolute;
+			width: 100%;
+		}
+	}
+
+	/* Clear the sticky header when anchor links are scrolled to */
+	&[id] {
+		scroll-margin-top: var(--header-height);
+	}
+}
+

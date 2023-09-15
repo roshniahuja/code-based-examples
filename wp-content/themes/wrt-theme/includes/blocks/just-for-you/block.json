@@ -1,0 +1,22 @@
+{
+  "apiVersion": 2,
+  "name": "wrt/just-for-you",
+  "description": "Just for you",
+  "title": "Just for you",
+  "category": "design",
+  "keywords": ["just for you", "for you"],
+  "attributes": {
+    "postId": {
+      "type": "number"
+    }
+  },
+  "styles": [
+    { "name": "default", "label": "Default", "isDefault": true },
+    { "name": "small", "label": "Small" }
+  ],
+  "supports": {
+    "html": false
+  },
+  "textdomain": "wrt",
+  "editorScript": "file:./index.js"
+}

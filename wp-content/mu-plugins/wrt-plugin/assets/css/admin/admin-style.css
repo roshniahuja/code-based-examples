@@ -1,0 +1,14 @@
+/**
+ * WRTPlugin - Admin only styles
+ * https://project-website.tld
+ *
+ */
+
+.banner-image {
+	display: none;
+}
+
+.banner-image-preview {
+	cursor: pointer;
+	margin-top: 10px;
+}

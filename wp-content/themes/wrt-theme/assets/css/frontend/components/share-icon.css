@@ -1,0 +1,84 @@
+/**
+ * Share icons
+ */
+
+.share-icon {
+	display: inline-block;
+	height: 40px;
+	position: relative;
+	transform: scale(1);
+	transform-origin: center;
+	transition: transform 0.15s ease-in-out;
+	width: 45px;
+
+	&:hover::before,
+	&:hover::after {
+		transform: scale(1.15);
+	}
+}
+
+.share-icon:hover {
+	transform: scale(1.12);
+}
+
+.share-icon::before,
+.share-icon::after {
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transform: scale(1);
+	transition: transform 0.3s ease-in-out;
+	width: 100%;
+}
+
+.share-icon::before {
+	left: 9px;
+	top: 7px;
+	width: 20px;
+	z-index: 1;
+}
+
+.share-icon.share-facebook::before {
+	background-image: url("../svg/icons/facebook.svg");
+	left: 12px;
+	width: 12px;
+}
+
+.share-icon.share-twitter::before {
+	background-image: url("../svg/icons/twitter.svg");
+	left: 10px;
+	top: 10px;
+}
+
+.share-icon.share-linkedin::before {
+	background-image: url("../svg/icons/linkedin.svg");
+}
+
+.share-icon.share-pintrest::before {
+	background-image: url("../svg/icons/pintrest.svg");
+	top: 8px;
+}
+
+.share-icon.share-email::before {
+	background-image: url("../svg/icons/envelope.svg");
+	top: 11px;
+}
+
+.share-icon.share-youtube::before {
+	background-image: url("../svg/icons/youtube.svg");
+	top: 11px;
+}
+
+.share-icon.share-instagram::before {
+	background-image: url("../svg/icons/instagram.svg");
+	top: 11px;
+}
+
+.share-icon::after {
+	background-image: url("../svg/icons/share.svg");
+	z-index: 2;
+}

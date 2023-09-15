@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Content Card",
+  "description": "A card for manually enter the content",
+  "textdomain": "wrt-theme",
+  "name": "wrt/content-card",
+  "icon": "list-view",
+  "category": "formatting",
+  "attributes": {
+    "showCaption": {
+      "type": "boolean",
+      "default": false
+    },
+    "imgId": {
+      "type": "integer",
+      "default": 0
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "cardLink": {
+      "type": "string",
+      "default": ""
+    },
+    "cardLinkOpensInNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "showDescription": {
+      "type": "boolean",
+      "default": false
+    },
+    "postId": {
+      "type": "number",
+      "default": 0
+    },
+    "insertPost": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css"
+}

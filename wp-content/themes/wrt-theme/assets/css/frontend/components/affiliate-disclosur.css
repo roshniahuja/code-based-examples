@@ -1,0 +1,18 @@
+.affiliate-discloser {
+	display: block;
+	padding: var(--wp--custom--spacing--016) var(--site-outer-padding);
+
+	@media (--bp-large) {
+		display: none;
+	}
+}
+
+.sidebar-content .affiliate-discloser {
+	border: 1px dotted var(--wp--custom--color--teal);
+	display: none;
+	padding: var(--wp--custom--spacing--016);
+
+	@media (--bp-large) {
+		display: block;
+	}
+}

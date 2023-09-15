@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "campaign.css",
+	"sources": [
+		"sass/campaign.scss"
+	],
+	"mappings": "AAAA,AAAa,aAAA,AAAA,WAAW,CAAC;EACxB,KAAK,EAAE,IAAK,GACZ;;AAED,AAAA,QAAQ,CAAC;EACR,MAAM,EAAE,IAAK,GACb",
+	"names": []
+}

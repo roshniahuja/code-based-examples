@@ -1,0 +1,25 @@
+.affiliate-discloser {
+	display: block;
+	font-size: var(--wp--custom--font-sizes--12-14);
+	font-style: italic;
+	padding: var(--wp--custom--spacing--016) var(--site-outer-padding);
+	text-align: center;
+
+	@media (--bp-large) {
+		display: none;
+	}
+
+	& p {
+		margin-bottom: 0;
+	}
+}
+
+.sidebar-content .affiliate-discloser {
+	border: 1px dotted var(--wp--custom--color--teal);
+	display: none;
+	padding: var(--wp--custom--spacing--016);
+
+	@media (--bp-large) {
+		display: block;
+	}
+}

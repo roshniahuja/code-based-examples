@@ -1,0 +1,9 @@
+.thank-you-article {
+
+	& .wp-post-image {
+		height: auto;
+		margin-bottom: var(--wp--custom--spacing--008);
+		max-width: 100%;
+		width: 100%;
+	}
+}

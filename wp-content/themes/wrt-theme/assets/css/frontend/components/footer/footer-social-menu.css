@@ -1,0 +1,69 @@
+.menu-item-social {
+
+	& ul {
+		display: flex;
+		gap: var(--wp--custom--spacing--016);
+		justify-content: center;
+		list-style: none;
+		margin: 0;
+		margin-bottom: var(--wp--custom--spacing--032);
+		padding: 0;
+
+		@media (--bp-medium) {
+			justify-content: flex-start;
+			margin-bottom: 0;
+		}
+	}
+
+	& a {
+		background-position: center center;
+		background-repeat: no-repeat;
+		display: block;
+		height: 30px;
+		margin: 0;
+		position: relative;
+		text-indent: -9999px;
+		transition: transform 0.15s ease-in-out;
+		width: 30px;
+
+		&::before {
+			background-image: url("../svg/social-icon-bg.svg");
+			background-size: 100% 100%;
+			content: "";
+			height: 40px;
+			left: -5px;
+			position: absolute;
+			top: -5px;
+			width: 40px;
+		}
+
+		&[href*="facebook"] {
+			background-image: url("../svg/icons/facebook.svg");
+		}
+
+		&[href*="instagram"] {
+			background-image: url("../svg/icons/instagram.svg");
+		}
+
+		&[href*="twitter"] {
+			background-image: url("../svg/icons/twitter.svg");
+		}
+
+		&[href*="youtube"] {
+			background-image: url("../svg/icons/youtube.svg");
+		}
+
+		&[href*="linkedin"] {
+			background-image: url("../svg/icons/linkedin.svg");
+		}
+
+		&[href*="pinterest"] {
+			background-image: url("../svg/icons/pinterest.svg");
+		}
+
+		&:focus,
+		&:hover {
+			transform: scale(1.12);
+		}
+	}
+}

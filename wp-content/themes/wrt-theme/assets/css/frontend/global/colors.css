@@ -1,0 +1,18 @@
+/*
+ * Colors
+ */
+:root {
+	--c-black: #000;
+	--c-white: #fff;
+	--c-almost-black: #27292b;
+	--c-gray-light: #e9eaec;
+	--c-gray-dark: #565867;
+	--c-gray-primary: #6d737f;
+	--c-lotion: #fafafa;
+	--c-teal: #1ea0ac;
+	--c-teal-40: rgba(30 160 172 / 40%);
+	--c-teal-light: #cdecef;
+	--c-teal-lightest: #e9f6f7;
+	--c-teal-dark: #1c828f;
+	--primary-text-color: var(--c-almost-black);
+}

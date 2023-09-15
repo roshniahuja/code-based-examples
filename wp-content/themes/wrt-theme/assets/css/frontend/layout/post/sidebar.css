@@ -1,0 +1,109 @@
+/**
+ * Single post sidebar
+ */
+
+/* This is also used on archive pages */
+.sidebar--stay-in-touch {
+	background-color: var(--wp--custom--color--teal-lightest) !important;
+	margin-bottom: calc(var(--wp--custom--spacing--048) + var(--wp--custom--spacing--032));
+	padding: var(--wp--custom--spacing--024) !important;
+	text-align: center;
+
+	& h5 {
+		font-size: var(--wp--custom--font-sizes--22-25);
+		font-weight: var(--wp--custom--font-weight--semibold);
+		margin-bottom: var(--wp--custom--spacing--008);
+	}
+
+	& label {
+		font-family: var(--wp--preset--font-family--bitter);
+		font-size: var(--wp--custom--font-sizes--12-14);
+		font-weight: var(--wp--custom--font-weight--regular);
+		letter-spacing: 0;
+	}
+
+	& input {
+		font-size: var(--wp--custom--font-sizes--12-14);
+		height: 44px;
+		width: 100%;
+	}
+
+	& label,
+	& input {
+		margin-bottom: var(--wp--custom--spacing--016);
+	}
+
+	& button:hover {
+		border: 1px solid var(--wp--custom--color--teal-dark);
+		height: var(--wp--custom--spacing--040);
+	}
+}
+
+.sidebar-content {
+
+	& .sidebar--teaching-aids {
+
+		& .teaching-aids--item {
+			margin-bottom: var(--wp--custom--spacing--024);
+
+			& h5 {
+				font-weight: var(--wp--custom--font-weight--semibold);
+			}
+
+			& > * {
+				margin-bottom: var(--wp--custom--spacing--008);
+
+				&:not(a):not(h5) {
+					color: var(--wp--custom--color--gray-dark);
+				}
+			}
+
+			& .wp-element-button {
+				justify-content: flex-start;
+				padding: 0;
+			}
+		}
+	}
+
+	& .sidebar--author-spotlight {
+
+		& .has-flag {
+			height: 155px;
+			margin-bottom: calc(2 * var(--wp--custom--spacing--020));
+			width: 155px;
+
+			&::after {
+				height: var(--wp--custom--spacing--020);
+			}
+		}
+
+		& .single-post--author-name {
+			font-weight: var(--wp--custom--font-weight--semibold);
+
+			& a {
+				display: block;
+				font-family: var(--wp--preset--font-family--bitter);
+				font-size: var(--wp--custom--font-sizes--22-25);
+				margin-bottom: var(--wp--custom--spacing--016);
+			}
+
+			& span {
+				font-size: var(--wp--custom--font-sizes--12-14);
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	& .sidebar--connect-with-us {
+		font-family: var(--wp--preset--font-family--bitter);
+
+		& p {
+			margin-bottom: var(--wp--custom--spacing--016);
+		}
+	}
+
+	& .sidebar-content--ad {
+		margin-top: var(--wp--custom--spacing--048);
+		width: 100%;
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"apiVersion": 2,
+	"name": "wrt/stay-in-touch",
+	"description": "A block to display stay in touch form",
+	"title": "Stay in touch",
+	"category": "design",
+	"keywords": ["stay in touch", "touch"],
+	"attributes": {
+	  "title": {
+		"type": "string",
+		"default": ""
+	  },
+	  "description": {
+		"type": "string",
+		"default": ""
+	  }
+	},
+	"supports": {
+	  "html": false
+	},
+	"textdomain": "wrt",
+	"editorScript": "file:./index.js"
+  }

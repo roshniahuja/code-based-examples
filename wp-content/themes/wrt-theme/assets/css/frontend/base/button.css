@@ -1,0 +1,97 @@
+/*
+ * Ensure that we are not overriding the editor styles of the
+ * WordPress Components.
+ *
+ * This is a workaround for: https://github.com/WordPress/gutenberg/issues/10178
+ *
+ * using :where to prevent the specificity increase of using :not
+ */
+a,
+button {
+
+	&.btn.formBtn {
+		background-color: var(--wp--custom--color--teal-dark) !important;
+		border-color: var(--wp--custom--color--teal) !important;
+		color: var(--wp--custom--color--white) !important;
+		text-decoration: none;
+		width: 100%;
+
+		@nest .boldgrid-section & {
+			line-height: var(--wp--custom--line-height--1-5);
+			padding: var(--wp--custom--spacing--010) var(--wp--custom--spacing--016) !important;
+			width: auto !important;
+		}
+	}
+
+	&.btn.formBtn,
+	&.button-primary,
+	&.button-secondary {
+		cursor: pointer;
+		display: inline-block;
+		font-family: var(--wp--preset--font-family--open-sans);
+		font-size: var(--wp--custom--font-sizes--12-16);
+		font-weight: var(--wp--custom--font-weight--semibold);
+		line-height: var(--wp--custom--line-height--1);
+		padding: var(--wp--custom--spacing--012) var(--wp--custom--spacing--016);
+	}
+
+	&.components-button {
+
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&.btn.formBtn,
+	&.button-primary {
+		background-color: var(--wp--custom--color--white);
+		border: 1px solid var(--wp--custom--color--teal-dark);
+		border-left-width: 4px;
+		color: var(--wp--custom--color--teal-dark);
+
+		&:focus,
+		&:hover {
+			background-color: var(--wp--custom--color--teal-lightest);
+			border-left-width: 1px;
+			color: var(--wp--custom--color--black-alt);
+			text-decoration: none;
+		}
+	}
+
+	&.button-secondary {
+		background-color: var(--wp--custom--color--teal-dark);
+		border-color: var(--wp--custom--color--teal);
+		border-left-style: solid;
+		border-width: 0 0 0 4px;
+		color: var(--wp--custom--color--white);
+
+		&:focus,
+		&:hover {
+			background-color: var(--wp--custom--color--teal-lightest);
+			border-left-color: var(--wp--custom--color--teal-dark);
+			border-left-width: 1px;
+			color: var(--wp--custom--color--black-alt);
+		}
+	}
+
+	&.disabled,
+	&.button-loading {
+		background-color: var(--wp--custom--color--teal-lightest);
+		border-left-width: 1px;
+		color: var(--wp--custom--color--black-alt);
+		pointer-events: none;
+	}
+
+	&.button-loading {
+
+		& > * {
+			display: none;
+		}
+
+		&::before {
+			content: "Loading...";
+			display: block;
+		}
+	}
+}

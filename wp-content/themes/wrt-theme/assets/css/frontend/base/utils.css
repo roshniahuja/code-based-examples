@@ -1,0 +1,39 @@
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:active) {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: var(--wp--custom--width--full);
+}
+
+.learn-more {
+	background-image: url("../svg/icons/arrow-blue.svg");
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-size: 24px;
+	color: var(--wp--custom--color--teal-dark);
+	display: inline-block;
+	font-weight: var(--wp--custom--font-weight--semibold);
+	padding-right: var(--wp--custom--spacing--032);
+	transition: all 0.3s ease-in-out;
+	width: fit-content;
+
+	&:hover {
+		background-image: url("../svg/icons/arrow.svg");
+		color: var(--wp--custom--color--black-alt);
+		padding-right: var(--wp--custom--spacing--040);
+		text-decoration: none;
+	}
+}

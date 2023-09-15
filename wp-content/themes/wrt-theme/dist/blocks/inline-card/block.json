@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Inline Card",
+  "description": "A card that is inline with content. Used as a CTA or related content driver.",
+  "textdomain": "wrt-theme",
+  "name": "wrt/inline-card",
+  "icon": "align-left",
+  "category": "formatting",
+  "attributes":{
+    "post_id": {
+      "type" : "integer",
+      "default": 0
+    },
+    "post_uuid": {
+      "type" : "string",
+      "default": ""
+    }
+  },
+  "example": {
+    "attributes": {
+      "post_id": 1,
+      "post_uuid": ""
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./index.js"
+}

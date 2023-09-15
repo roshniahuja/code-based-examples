@@ -1,0 +1,81 @@
+.editors-picks-items-wrapper {
+	background: var(--wp--custom--color--teal-light-gradient);
+	min-width: 100%;
+	position: relative;
+	width: 100%;
+
+	&::before,
+	&::after {
+		content: "";
+		height: 70px;
+		left: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+		position: absolute;
+		right: 50%;
+		width: 100vw;
+	}
+
+	&::after {
+		background-image: linear-gradient(180deg, var(--wp--custom--color--white-25) 0, var(--wp--custom--color--white-25) 10px, transparent 10px, transparent 20px, var(--wp--custom--color--white-50) 20px, var(--wp--custom--color--white-50) 30px, transparent 30px, transparent 40px, var(--wp--custom--color--white-75) 40px, var(--wp--custom--color--white-75) 50px, transparent 50px, transparent 60px, var(--wp--custom--color--white) 60px, var(--wp--custom--color--white) 70px);
+		bottom: 10px;
+	}
+}
+
+.editors-picks-items {
+	display: grid;
+	gap: var(--wp--custom--spacing--024);
+	grid-template-columns: 100%;
+	margin: 0 auto;
+	max-width: var(--wp--custom--width--full);
+	padding-bottom: 9.1875rem;
+
+	@media (--bp-medium) {
+		grid-template-columns: repeat(2, minmax(100px, 1fr));
+	}
+
+	@media (--bp-large) {
+		grid-template-columns: repeat(4, minmax(100px, 1fr));
+	}
+
+	& .post-card {
+		border-bottom: none;
+		margin: 12px auto;
+		max-width: 308px;
+
+		& div:last-child {
+			margin-top: auto;
+		}
+
+		@media (--bp-medium) {
+			margin: 0;
+		}
+	}
+
+	& .post-card__title {
+		color: var(--wp--custom--color--gray-dark);
+		font-size: var(--wp--custom--font-sizes--20-25);
+	}
+
+	& .post-card__thumbnail img {
+		height: 255px;
+		width: 276px;
+	}
+
+	& .post-card__buynow {
+		font-weight: var(--wp--custom--font-weight--semibold);
+	}
+
+	& .post-card__byline {
+		color: var(--wp--custom--color--gray-dark);
+		font-size: var(--wp--custom--font-sizes--base);
+		font-weight: var(--wp--custom--font-weight--regular);
+		margin-top: var(--wp--custom--spacing--008);
+		text-transform: unset;
+
+		& a {
+			color: var(--wp--custom--color--gray);
+			text-transform: capitalize;
+		}
+	}
+}

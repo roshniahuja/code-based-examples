@@ -1,0 +1,21 @@
+/**
+ * Post tags styles
+ *
+ * @package WRTTheme
+ */
+
+.post-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--wp--custom--spacing--010);
+
+	& a[rel="tag"] {
+		background-color: var(--wp--custom--color--gray-light);
+		color: var(--wp--custom--color--black-alt);
+		font-size: var(--wp--custom--font-sizes--12-14);
+		font-weight: var(--wp--custom--font-weight--semibold);
+		letter-spacing: 0.03em;
+		padding: var(--wp--custom--spacing--004) var(--wp--custom--spacing--008);
+		text-transform: uppercase;
+	}
+}

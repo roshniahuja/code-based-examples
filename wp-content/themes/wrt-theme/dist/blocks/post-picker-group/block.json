@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "wrt/post-picker-group",
+  "title": "Post Picker Group",
+  "category": "text",
+  "description": "Post picker group block",
+  "attributes": {
+    "mode": {
+      "type": "string",
+      "default": "post"
+    },
+    "contentTypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": ["post"]
+    },
+    "partial": {
+      "type": "string",
+      "default": "simple-card"
+    },
+    "size": {
+      "type": "number",
+      "default": 1
+    },
+    "containerClass": {
+      "type": "string",
+      "default": ""
+    },
+    "childrenClass": {
+      "type": "string",
+      "default": ""
+    },
+    "showExcerpt": {
+      "type": "boolean",
+      "default": false
+    },
+    "location": {
+      "type": "string",
+      "default" : ""
+    }
+  },
+  "supports": {
+    "reusable": false,
+    "html": false,
+    "anchor": true,
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "align": ["wide", "full"],
+    "spacing": {
+      "margin": ["top", "bottom"],
+      "padding": ["top", "bottom"]
+    }
+  },
+  "providesContext": {
+    "wrt/postPickerContentTypes": "contentTypes",
+    "wrt/postPickerMode": "mode",
+    "wrt/postPickerPartial": "partial",
+    "wrt/postPickerClassName": "childrenClass",
+    "wrt/postPickerShowExcerpt": "showExcerpt",
+    "wrt/postPickerLocation": "location"
+  },
+  "textdomain": "tenup",
+  "editorScript": "file:./index.js"
+}

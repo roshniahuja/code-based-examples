@@ -1,0 +1,31 @@
+body.single-post .entry-content [data-freestar-ad] {
+	align-items: center;
+	background-color: var(--wp--custom--color--ad-grey);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: var(--wp--custom--spacing--008);
+	position: relative;
+
+	&::before {
+		color: var(--wp--custom--color--black-alt);
+		content: "Advertisement";
+		display: block;
+		font-size: 10px;
+		line-height: var(--wp--custom--font--line-height--1-5);
+		margin-bottom: var(--wp--custom--spacing--008);
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+.sidebar-sticky-ad {
+	position: sticky;
+	top: 200px;
+}
+
+.fs-sticky-wrapper .fs-close-button-sticky {
+	margin-top: 0 !important;
+	right: 10px !important;
+	top: 10px !important;
+}

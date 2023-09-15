@@ -1,0 +1,196 @@
+.header-search--container {
+	background-color: var(--wp--custom--color--gray-light-100);
+	border-bottom: 1px solid var(--wp--custom--color--gray-light);
+	margin: 0 calc(-1 * ( var(--site-outer-padding) / 2));
+	padding: var(--wp--custom--spacing--012) calc(var(--site-outer-padding) / 2);
+	position: relative;
+
+	@media (--bp-large) {
+		background-color: transparent;
+		border-bottom: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	@media (--bp-medium-max) {
+		top: 3.2rem;
+	}
+}
+
+.search-form {
+
+	& input[type="submit"] {
+		background-color: transparent;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none'%3E%3Cpath fill='%231C828F' fill-rule='evenodd' d='M4.8 9.478a4.678 4.678 0 1 1 9.357 0 4.678 4.678 0 0 1-9.357 0ZM9.478 3.2a6.278 6.278 0 1 0 3.838 11.247l2.119 2.119a.8.8 0 0 0 1.131-1.132l-2.118-2.118A6.278 6.278 0 0 0 9.478 3.2Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+		background-position: center;
+		background-repeat: no-repeat;
+		border: 0;
+		cursor: pointer;
+		overflow: hidden; /* hide any overflow content */
+		position: relative;
+		text-indent: -9999px; /* hide the text visually */
+
+		@media (--bp-large) {
+			margin-right: -20px;
+			min-width: 48px;
+		}
+	}
+
+	/* Site header specific styles */
+	@nest .site-header & {
+		align-items: flex-start;
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--wp--custom--spacing--012);
+
+		@media (--bp-large) {
+			align-items: center;
+			border: 1px solid var(--c-teal-40);
+			border-bottom-width: 2px;
+			border-radius: 3px;
+			flex-wrap: nowrap;
+			gap: var(--wp--custom--spacing--008);
+			padding-right: 0.5rem;
+		}
+
+		@media (--bp-large-max) {
+			gap: var(--wp--custom--spacing--012);
+
+			& input[type="submit"] {
+				height: 40px;
+				position: absolute;
+				width: 40px;
+			}
+
+			& input[type="search"] {
+				height: 40px;
+				padding-left: 38px;
+				width: 100%;
+			}
+		}
+
+		& input[type="search"] {
+
+			@media (--bp-large) {
+				border: 0;
+				min-width: 200px;
+			}
+
+			@media (--bp-xlarge) {
+				min-width: 300px;
+			}
+		}
+
+		& .select-title {
+			font-family: var(--ff-heading);
+			font-size: 1rem;
+			font-weight: 500;
+		}
+
+		& .checkbox-container {
+			align-content: center;
+			align-items: flex-start;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			row-gap: 0.5rem;
+		}
+
+		& .three-across .single-checkbox {
+			width: calc(33.333% - 1rem);
+		}
+
+		& .single-checkbox {
+			align-items: start;
+			display: flex;
+			font-size: 0.775rem;
+			letter-spacing: initial;
+			width: calc(50% - 1rem);
+
+			@media (--bp-small) {
+				font-size: 0.875rem;
+				letter-spacing: 1px;
+			}
+
+			& input[type="checkbox"] {
+				margin-right: 0.5rem;
+				min-width: 25px;
+			}
+		}
+
+		& .grades-select,
+		& .topic-select {
+			align-content: center;
+			box-sizing: border-box;
+			display: flex;
+			flex-basis: calc(50% - (var(--wp--custom--spacing--012) / 2));
+			flex-wrap: wrap;
+			height: 2rem;
+
+			@media (--bp-large-max) {
+				display: none;
+
+				@nest .is-advance-search-expanded & {
+					display: flex;
+				}
+
+				@nest .page-content & {
+					display: flex;
+				}
+			}
+		}
+
+		& .pseudo-dropdown {
+			background: var(--c-white);
+			border: 1px solid var(--c-teal-40);
+			left: 1rem;
+			padding: 0;
+			position: absolute;
+			right: 1rem;
+			text-align: left;
+			top: 100%;
+			transition: max-height 0.3s ease-in-out;
+			width: 100%;
+			z-index: 1001;
+
+			& > * {
+				padding: 0.5rem 1rem;
+			}
+
+			&[aria-hidden="true"] {
+				border: 0;
+				margin: 0;
+				max-height: 0;
+				overflow: hidden;
+				padding: 0;
+				pointer-events: none;
+				visibility: hidden;
+			}
+
+			& > [aria-hidden="true"] {
+				border: 0;
+				margin: 0;
+				max-height: 0;
+				overflow: hidden;
+				padding: 0;
+				pointer-events: none;
+				visibility: hidden;
+			}
+
+			&[aria-hidden="false"] {
+				left: 0;
+				max-height: calc(var(--viewport-height) - var(--header-height) - var(--wp-admin--admin-bar--height, 0px));
+				padding: 1rem 0;
+			}
+
+			@media (--bp-xxlarge) {
+				left: auto;
+				right: 0;
+
+				&[aria-hidden="false"] {
+					left: auto;
+				}
+			}
+		}
+	}
+}

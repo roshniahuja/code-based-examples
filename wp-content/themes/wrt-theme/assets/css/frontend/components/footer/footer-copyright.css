@@ -1,0 +1,15 @@
+.site-footer__colophone {
+	background-color: var(--wp--custom--color--gray-light);
+	padding: var(--wp--custom--spacing--010) 0;
+}
+
+.copyright-text {
+	font-size: var(--wp--custom--font-sizes--12-14);
+
+	& > * {
+
+		@mixin collapse-margins;
+	}
+
+	@mixin collapse-margins;
+}

@@ -1,0 +1,47 @@
+/**
+ * Core media & text block
+ *
+ * @TODO: the ENG 5.10 inline block can inherit styles from this block.
+ */
+
+body .is-layout-constrained > .wp-block-media-text {
+	margin-top: calc(3 * var(--wp--custom--spacing--032));
+}
+
+.wp-block-media-text {
+	background-color: var(--wp--custom--color--teal-light);
+	background-image: linear-gradient(0deg, transparent 0%, transparent calc(100% - 70px), var(--wp--custom--color--white) calc(100% - 70px), var(--wp--custom--color--white) calc(100% - 60px), transparent calc(100% - 60px), transparent calc(100% - 50px), var(--wp--custom--color--white-75) calc(100% - 50px), var(--wp--custom--color--white-75) calc(100% - 40px), transparent calc(100% - 40px), transparent calc(100% - 30px), var(--wp--custom--color--white-50) calc(100% - 30px), var(--wp--custom--color--white-50) calc(100% - 20px), transparent calc(100% - 20px), transparent calc(100% - 10px), var(--wp--custom--color--white-25) calc(100% - 10px), var(--wp--custom--color--white-25) 100%);
+	background-position: bottom;
+	background-repeat: repeat-x;
+	background-size: 100% 80px;
+	margin-bottom: var(--wp--custom--spacing--024);
+	margin-top: calc(3 * var(--wp--custom--spacing--032));
+	padding: var(--wp--custom--spacing--020) var(--wp--custom--spacing--020) calc(2 * var(--wp--custom--spacing--048));
+
+
+	@media (--bp-large) {
+		display: flex;
+		gap: calc(2 * var(--wp--custom--spacing--040));
+		padding: calc(2 * var(--wp--custom--spacing--020)) var(--wp--custom--spacing--048) calc(2 * var(--wp--custom--spacing--048));
+	}
+
+	& .wp-block-media-text__media {
+		margin-bottom: calc(3 * var(--wp--custom--spacing--020));
+		margin-top: calc(-4 * var(--wp--custom--spacing--032));
+
+		@media (--bp-large) {
+			flex: 0 0 55%;
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+
+		@media (--bp-xlarge) {
+			margin-top: calc(-4 * var(--wp--custom--spacing--032));
+		}
+	}
+
+	& .wp-block-media-text__content {
+		font-size: var(--wp--custom--font-sizes--12-16);
+		padding: 0;
+	}
+}

@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--wp--custom--color--gray-light-100);
+	color: var(--wp--custom--color--black-alt);
+	display: flex;
+	flex-direction: column;
+	min-height: var(--viewport-height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-bottom: var(--wp--custom--spacing--024);
+	margin-top: 0;
+}
+
+a {
+	color: var(--wp--custom--color--teal-dark);
+	text-decoration: none;
+
+	@nest .has-text-color & {
+		color: inherit;
+	}
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&:focus {
+		outline-color: var(--wp--custom--color--teal-dark);
+	}
+}
+
+template {
+	display: none;
+}

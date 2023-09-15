@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Post Sponsor",
+  "description": "Post Sponsor",
+  "textdomain": "wrt-theme",
+  "name": "wrt/post-sponsor",
+  "icon": "index-card",
+  "category": "formatting",
+  "attributes":{
+    "sponsorLogo": {
+      "type": "object"
+    },
+    "sponsorId": {
+      "type": "integer"
+    },
+    "sponsorDescription": {
+      "type": "string"
+    }
+  },
+  "usesContext": ["postId", "postType"],
+  "supports": {
+    "html": false,
+    "reusable": false
+  },
+  "editorScript": "file:./index.js"
+}

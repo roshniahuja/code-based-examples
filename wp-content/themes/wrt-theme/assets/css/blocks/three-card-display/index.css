@@ -1,0 +1,14 @@
+.three-card-display {
+	display: grid;
+	gap: var(--wp--custom--spacing--024);
+	grid-template-columns: 100%;
+	position: relative;
+
+	@media (--bp-medium) {
+		grid-template-columns: repeat(3, minmax(100px, 1fr));
+	}
+
+	& .post-card__title {
+		font-size: var(--wp--custom--font-sizes--20-25);
+	}
+}

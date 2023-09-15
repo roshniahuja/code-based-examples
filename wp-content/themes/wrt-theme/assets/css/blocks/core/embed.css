@@ -1,0 +1,42 @@
+/* Managing the aspect ratio and sizing on FE */
+
+.wp-block-embed {
+	max-width: var(--default-width);
+
+	& iframe {
+		vertical-align: middle;
+		width: 100%;
+	}
+
+	&.alignwide {
+		max-width: var(--wp--custom--width--wide);
+	}
+
+	&.alignfull {
+		max-width: 100%;
+	}
+}
+
+.wp-embed-aspect-16-9 {
+
+	& .wp-block-embed__wrapper::before {
+		padding-top: calc(9 / 16 * 100%);
+	}
+}
+
+.wp-has-aspect-ratio .wp-block-embed__wrapper {
+
+	&::before {
+		content: "";
+		display: block;
+		height: 0;
+	}
+
+	& iframe {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}

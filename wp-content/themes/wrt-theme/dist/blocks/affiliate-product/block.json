@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Affiliate Product",
+  "description": "Affiliate Product",
+  "textdomain": "wrt-theme",
+  "name": "wrt/affiliate-product",
+  "icon": "index-card",
+  "category": "formatting",
+  "attributes":{
+    "productPostId": {
+      "type": "integer",
+      "default": 0
+    },
+    "showAttribution": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "usesContext": ["postId", "postType"],
+  "supports": {
+    "html": false,
+    "reusable": false
+  },
+  "editorScript": "file:./index.js"
+}

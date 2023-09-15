@@ -1,0 +1,18 @@
+/**
+ * Flag styles.
+ */
+
+.has-flag {
+	position: relative;
+
+	&::after {
+		background-color: var(--wp--custom--color--teal);
+		clip-path: polygon(100% 0, 0 0, 100% 100%);
+		content: "";
+		height: var(--wp--custom--spacing--032);
+		left: 0;
+		position: absolute;
+		top: 100%;
+		width: 50%;
+	}
+}

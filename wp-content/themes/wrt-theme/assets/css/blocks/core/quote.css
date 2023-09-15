@@ -1,0 +1,70 @@
+/**
+ * Core quote block
+ */
+
+.wp-block-quote {
+	background-color: var(--wp--custom--color--teal-lightest);
+	margin: var(--wp--custom--spacing--032) 0;
+	padding: var(--wp--custom--spacing--024) var(--wp--custom--spacing--024) var(--wp--custom--spacing--088);
+	position: relative;
+	width: 100%;
+
+	@media (--bp-large) {
+		margin: var(--wp--custom--spacing--036) 0;
+		padding: var(--wp--custom--spacing--048) var(--wp--custom--spacing--064) var(--wp--custom--spacing--064);
+	}
+
+	&::before {
+		background-image: url("../svg/icons/quote.svg");
+		background-position: 50%;
+		background-repeat: no-repeat;
+		background-size: 70%;
+		content: "";
+		display: block;
+		height: 43px;
+		margin-top: calc(-1 * var(--wp--custom--spacing--008));
+		position: absolute;
+		width: 43px;
+
+		@media (--bp-large) {
+			background-size: 100%;
+			height: 43px;
+			width: 43px;
+		}
+	}
+
+	&::after {
+		background-image: linear-gradient(180deg, var(--wp--custom--color--white-25) 0, var(--wp--custom--color--white-25) 10px, transparent 10px, transparent 20px, var(--wp--custom--color--white-50) 20px, var(--wp--custom--color--white-50) 30px, transparent 30px, transparent 40px, var(--wp--custom--color--white-75) 40px, var(--wp--custom--color--white-75) 50px, transparent 50px, transparent 60px, var(--wp--custom--color--white) 60px, var(--wp--custom--color--white) 70px);
+		bottom: 0;
+		content: "";
+		height: 70px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
+
+	& > * {
+		margin-bottom: var(--wp--custom--spacing--016);
+		padding-left: var(--wp--custom--spacing--064);
+
+		@media (--bp-large) {
+			margin-bottom: var(--wp--custom--spacing--024);
+			padding-left: calc(2 * var(--wp--custom--spacing--040));
+		}
+	}
+
+	& p {
+		font-family: var(--wp--preset--font-family--bitter);
+		font-size: var(--wp--custom--font-sizes--18-20);
+		font-style: italic;
+
+		@media (--bp-large) {
+			font-size: var(--wp--custom--font-sizes--22-28);
+		}
+	}
+
+	& cite {
+		font-style: normal;
+		text-transform: uppercase;
+	}
+}

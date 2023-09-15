@@ -1,0 +1,152 @@
+/**
+ * Related posts
+ */
+
+body .is-layout-flow > .single-post--related,
+.single-post--related {
+	margin: calc(var(--wp--custom--spacing--024) + 102px) 0 var(--wp--custom--spacing--024);
+
+	@media (--bp-medium) {
+		margin: calc(80px + var(--wp--custom--spacing--048)) 0 0;
+	}
+}
+
+.single-post--related {
+	background: var(--wp--custom--color--teal-light-gradient);
+	max-width: 100%;
+	padding: var(--wp--custom--spacing--048) 0 calc(var(--wp--custom--spacing--032) + 80px);
+	position: relative;
+
+	&::before,
+	&::after {
+		content: "";
+		height: 70px;
+		position: absolute;
+		width: 100%;
+	}
+
+	&::before {
+		background-image: linear-gradient(180deg, var(--wp--custom--color--gray-light) 0, var(--wp--custom--color--gray-light) 10px, transparent 10px, transparent 20px, var(--wp--custom--color--gray-light-75) 20px, var(--wp--custom--color--gray-light-75) 30px, transparent 30px, transparent 40px, var(--wp--custom--color--gray-light-50) 40px, var(--wp--custom--color--gray-light-50) 50px, transparent 50px, transparent 60px, var(--wp--custom--color--gray-light-20) 60px, var(--wp--custom--color--gray-light-20) 70px);
+		top: -80px;
+	}
+
+	&::after {
+		background-image: linear-gradient(180deg, var(--wp--custom--color--white-25) 0, var(--wp--custom--color--white-25) 10px, transparent 10px, transparent 20px, var(--wp--custom--color--white-50) 20px, var(--wp--custom--color--white-50) 30px, transparent 30px, transparent 40px, var(--wp--custom--color--white-75) 40px, var(--wp--custom--color--white-75) 50px, transparent 50px, transparent 60px, var(--wp--custom--color--white) 60px, var(--wp--custom--color--white) 70px);
+		bottom: 10px;
+	}
+
+	& .single-article {
+		align-items: center;
+		grid-template-columns: minmax(85%, 3fr) minmax(348px, 1fr);
+
+		& a {
+			text-decoration: none;
+
+			&:focus,
+			&:hover {
+				color: var(--wp--custom--color--black-alt);
+				text-decoration: underline;
+			}
+		}
+	}
+
+	& article > h2 {
+		font-size: var(--wp--custom--font-sizes--49-61);
+		margin-bottom: var(--wp--custom--spacing--024);
+		max-width: 80%;
+
+		&::after {
+			background-image: url("../svg/arrow.svg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			content: "";
+			height: 60px;
+			margin-left: var(--wp--custom--spacing--048);
+			margin-top: var(--wp--custom--spacing--004);
+			position: absolute;
+			right: 0;
+			transform: rotate(-20deg);
+			width: 120px;
+
+			@media (--bp-medium) {
+				right: auto;
+				transform: rotate(-20deg);
+			}
+		}
+
+		@media (--bp-medium) {
+			margin-bottom: var(--wp--custom--spacing--048);
+			max-width: 100%;
+		}
+	}
+
+	& .single-post--related-grade {
+		color: var(--wp--custom--color--black-light);
+		font-size: var(--wp--custom--font-sizes--12-14);
+		font-weight: var(--wp--custom--font-weight--bold);
+		margin-bottom: var(--wp--custom--spacing--016);
+		text-transform: uppercase;
+	}
+
+	& .single-post--related-header {
+		display: flex;
+		flex-direction: column;
+		gap: var(--wp--custom--spacing--024);
+
+		@media (--bp-medium) {
+			flex-direction: row;
+			gap: var(--wp--custom--spacing--040);
+		}
+
+		& .single-post--related-image {
+			height: 100%;
+			line-height: 0;
+			margin-bottom: var(--wp--custom--spacing--024);
+
+			@media (--bp-medium) {
+				margin-bottom: 0;
+			}
+
+			& img {
+				height: auto;
+				width: 100%;
+
+				@media (--bp-medium) {
+					width: 330px;
+				}
+			}
+		}
+
+		& h3 {
+			font-size: var(--wp--custom--font-sizes--31-39);
+			margin-bottom: var(--wp--custom--spacing--016);
+
+			& a {
+				color: var(--wp--custom--color--black-alt);
+				text-decoration: none;
+
+				&:focus,
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		& .post-tags {
+			margin-top: var(--wp--custom--spacing--016);
+		}
+	}
+
+	& .single-post--related-content {
+		margin-top: var(--wp--custom--spacing--024);
+
+		@media (--bp-medium) {
+			margin-left: var(--wp--custom--spacing--068);
+			margin-top: var(--wp--custom--spacing--068);
+		}
+
+		& p {
+			font-size: var(--wp--custom--font-sizes--16-18);
+		}
+	}
+}

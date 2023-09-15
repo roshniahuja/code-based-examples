@@ -1,0 +1,16 @@
+.winner-box {
+	background-color: var(--wp--custom--color--teal-lightest);
+	padding: var(--wp--custom--spacing--024);
+
+	& h2 {
+		font-size: var(--wp--custom--font-sizes--22-25);
+		font-weight: var(--wp--custom--font-weight--semibold);
+		margin-bottom: var(--wp--custom--spacing--008);
+	}
+
+	& .winner-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}

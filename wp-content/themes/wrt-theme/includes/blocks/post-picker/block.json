@@ -1,0 +1,43 @@
+{
+  "apiVersion": 2,
+  "name": "wrt/post-picker",
+  "description": "Post picker",
+  "title": "WRT Post Picker",
+  "category": "design",
+  "keywords": ["hero content", "content item", "content", "item"],
+  "parent": ["wrt/post-picker-group"],
+  "attributes": {
+    "postId": {
+      "type": "number"
+    },
+    "partial": {
+      "type": "string"
+    },
+    "containerClass": {
+      "type": "string"
+    },
+    "showExcerpt": {
+      "type": "boolean",
+      "default": false
+    },
+    "isCurated": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "html": false,
+    "reusable": false
+  },
+  "usesContext": [
+    "wrt/postPickerContentTypes",
+    "wrt/postPickerMode",
+    "wrt/postPickerPartial",
+    "wrt/postPickerClassName",
+    "wrt/postPickerShowExcerpt",
+    "wrt/postPickerGroup",
+    "wrt/postPickerLocation"
+  ],
+  "textdomain": "wrt",
+  "editorScript": "file:./index.js"
+}

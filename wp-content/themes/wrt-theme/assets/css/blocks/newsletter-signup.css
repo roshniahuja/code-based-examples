@@ -1,0 +1,106 @@
+/**
+ * ENG-5.04 Custom Blocks: Newsletter Sign Up
+ */
+
+body .is-layout-flow > .wp-block-wrt-newsletter-signup {
+	margin-bottom: var(--wp--custom--spacing--068);
+
+	@media (--bp-medium) {
+		margin-bottom: 0;
+	}
+}
+
+.wp-block-wrt-newsletter-signup {
+	background-color: var(--wp--custom--color--white);
+	padding: var(--wp--custom--spacing--032) var(--wp--custom--spacing--020);
+	position: relative;
+
+	@media (--bp-medium) {
+		padding: var(--wp--custom--spacing--040);
+	}
+
+	& h2 {
+		margin-bottom: var(--wp--custom--spacing--016);
+	}
+
+	& .newsletter-signup__description {
+		color: var(--wp--custom--color--gray-dark);
+		font-family: var(--wp--preset--font-family--bitter);
+		font-size: var(--wp--custom--font-sizes--14-20);
+		font-weight: 500;
+		margin-bottom: var(--wp--custom--spacing--016);
+	}
+
+	& .newsletter-signup__email-input {
+		display: flex;
+		flex-wrap: wrap;
+
+		& input {
+			border-color: var(--wp--custom--color--gray);
+			border-radius: 0;
+			border-width: 1px 0 1px 1px;
+			flex: 1 0 60%;
+			width: 100%;
+
+			&.is-error {
+				border-bottom-width: 2px;
+				border-color: var(--wp--custom--color--red);
+			}
+		}
+
+		& + label {
+			color: var(--wp--custom--color--gray-dark);
+			font-weight: var(--wp--custom--font--weight--regular);
+			letter-spacing: normal;
+			margin: var(--wp--custom--spacing--024) 0;
+		}
+
+		& .newsletter-signup__status {
+			display: none;
+			font-size: var(--wp--custom--font-sizes--12-14);
+			margin: var(--wp--custom--spacing--008) 0 calc(-1 * var(--wp--custom--spacing--012));
+			width: 100%;
+
+			&.error {
+				color: var(--wp--custom--color--red);
+			}
+
+			&.success {
+				color: var(--wp--custom--color--teal-dark);
+			}
+		}
+	}
+
+	& .checkbox-container {
+		align-items: flex-start;
+		display: flex;
+		gap: var(--wp--custom--spacing--016);
+
+		&:not(:last-child) {
+			margin-bottom: var(--wp--custom--spacing--024);
+		}
+
+		& input {
+			flex: none; /* prevents element from squishing on mobile layouts */
+		}
+
+		& label {
+			font-family: var(--wp--preset--font-family--bitter);
+			font-weight: 500;
+
+			& span {
+				color: var(--wp--custom--color--gray);
+				display: block;
+				font-family: var(--wp--preset--font-family--open-sans);
+				font-size: var(--wp--custom--font-sizes--12-14);
+				font-weight: var(--wp--custom--font--weight--regular);
+			}
+		}
+	}
+
+	& .newsletter-view-all {
+		display: flex;
+		font-size: var(--wp--custom--font-sizes--12-14);
+		justify-content: flex-end;
+	}
+}

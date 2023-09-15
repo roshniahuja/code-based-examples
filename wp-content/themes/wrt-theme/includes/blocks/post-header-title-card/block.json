@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Post Header - Title Card",
+  "description": "Post Header Title Card",
+  "textdomain": "wrt-theme",
+  "name": "wrt/post-header-title-card",
+  "icon": "index-card",
+  "category": "formatting",
+  "parent": ["wrt/post-header"],
+  "attributes":{
+  },
+  "usesContext": ["postId", "postType"],
+  "supports": {
+    "html": false,
+    "reusable": false
+  },
+  "editorScript": "file:./index.js"
+}

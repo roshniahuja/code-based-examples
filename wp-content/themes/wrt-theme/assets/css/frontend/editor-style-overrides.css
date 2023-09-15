@@ -1,0 +1,27 @@
+/**
+ * WRTTheme - Editor Style Overrides
+ * https://project-website.tld
+ *
+ * Copyright (c) 2017 10up
+ * Licensed under the MIT license.
+ */
+
+.editor-styles-wrapper .post-card {
+	height: auto !important;
+}
+
+.editor-styles-wrapper div.wp-block-embed {
+	background: var(--c-black);
+
+	&.alignwide {
+		max-width: var(--wp--custom--width--wide);
+	}
+
+	&.alignfull {
+		max-width: 100%;
+	}
+}
+
+.editor-styles-wrapper figure.wp-block-embed {
+	max-width: initial;
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "title": "Topics",
+  "description": "Manually curated listing of topics",
+  "textdomain": "wrt-theme",
+  "name": "wrt/topics",
+  "icon": "screenoptions",
+  "category": "formatting",
+  "attributes":{
+    "description": {
+      "type" : "string",
+      "default": ""
+    },
+    "eyebrow": {
+      "type" : "string",
+      "default": ""
+    },
+    "newsletter": {
+      "type": "array"
+    },
+    "title": {
+      "type" : "string",
+      "default": ""
+    }
+  },
+  "example": {
+    "attributes":{
+      "description": "This is where the teaching magic happens. These classroom ideas, teaching strategies, and actionable tips from brilliant teachers (like you) will inspire you, answer your burning questions, and help you be the best teacher you can be!",
+      "eyebrow": "Elementary",
+      "title": "Teaching Topics"
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./index.js"
+}
